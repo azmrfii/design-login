@@ -27,7 +27,7 @@ class CreateMasyarakatsTable extends Migration
             $table->tinyInteger('status')->default(1);
             $table->integer('update_by')->nullable();
             $table->dateTime('update_date')->nullable();
-            // $table->timestamps();
+            $table->timestamps();
         });
     }
 

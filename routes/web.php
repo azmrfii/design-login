@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 // Route for login
 Route::get('/', [LoginController::class, 'showLogin'])->name('login');
 Route::post('processlogin', [LoginController::class, 'processLogin'])->name('processlogin');
+Route::post('processloginmasyarakat', [LoginController::class, 'processLoginMasyarakat'])->name('processloginmasyarakat');
+Route::post('register/masyarakat', [LoginController::class, 'register'])->name('register');
 // Route login as masyarakat
 Route::group(['middleware' => ['auth:masyarakat', 'isActive']], function() {
     Route::get('home', [HomeController::class, 'home'])->name('home');

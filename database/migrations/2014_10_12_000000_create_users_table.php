@@ -23,8 +23,8 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('level', ['admin', 'petugas'])->default('petugas');
             $table->tinyInteger('status')->default(1);
-            // $table->rememberToken();
-            // $table->timestamps();
+            $table->rememberToken();
+            $table->timestamps();
         });
     }
 
